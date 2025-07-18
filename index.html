@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAIN WEB SOLUTION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <div class="logo">ZWS.</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+    <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+
+
+    <section class="hero">
+    <div class="hero-left">
+      <img src="zain-pic.jpg" alt="Zain's Picture">
+    </div>
+
+    <div class="hero-right">
+      <h1>Zain Web Solution</h1>
+      <p>Professional websites banayein with modern design, fast loading, and mobile responsive layouts. 💻✨</p>
+    </div>
+  </section>
+
+     <div class="slider-container">
+
+    <!-- Top Slider - Scrolls Right -->
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">Creative Thinking</div>
+        <div class="slide">Problem Solving</div>
+        <div class="slide">Web Development</div>
+        <div class="slide">User Experience</div>
+        <div class="slide">Teamwork</div>
+        <div class="slide">Smart Solutions</div>
+        <div class="slide">Frontend Magic</div>
+      </div>
+    </div>
+
+    <!-- Bottom Slider - Scrolls Left -->
+    <div class="slider">
+      <div class="slide-track reverse">
+        <div class="slide">Clean Code</div>
+        <div class="slide">Zain Web Solution</div>
+        <div class="slide">Fast Performance</div>
+        <div class="slide">Responsive Design</div>
+        <div class="slide">Modern Layouts</div>
+        <div class="slide">Mobile Friendly</div>
+        <div class="slide">Professional UI</div>
+      </div>
+    </div>
+
+  </div>
+
+
+   <!-- Footer Start -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- Box 1: About -->
+      <div class="footer-box">
+        <h3>Zain Web Solution</h3>
+        <p>We design clean, responsive, and modern websites for individuals and businesses around the world.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Box 2: Quick Links -->
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Box 3: Contact Info -->
+      <div class="footer-box">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i> zainwebsolutions1@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Attock Cantt, Pakistan</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom">
+      &copy; 2025 Zain Web Solution. All Rights Reserved.
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+
+
+
+</body>
+</html>
