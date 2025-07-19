@@ -1,117 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZAIN WEB SOLUTION</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zain's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 20px 40px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: white;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding-top: 30px;
+    }
+
+    .skill-card, .project-card {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .btn-primary, .btn-secondary {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    .social-links a {
+      color: #00c6ff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        width: 200px;
+        padding: 20px;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-    <div class="logo">ZWS.</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul id="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Zain's Portfolio</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+  </header>
 
-    <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
-  </script>
-
-
-    <section class="hero">
-    <div class="hero-left">
-      <img src="zain-pic.jpg" alt="Zain's Picture">
-    </div>
-
-    <div class="hero-right">
-      <h1>Zain Web Solution</h1>
-      <p>Professional websites banayein with modern design, fast loading, and mobile responsive layouts. 💻✨</p>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <img src="your-photo.jpg" alt="Zain's Photo" class="profile-img" />
+      <h1>Hi, I'm Zain</h1>
+      <p>Frontend Web Developer | React | Node.js | JavaScript</p>
+      <a href="#contact" class="btn-primary">Hire Me</a>
     </div>
   </section>
 
-     <div class="slider-container">
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am Zain, a passionate web developer currently studying ICS. I specialize in creating responsive, fast, and interactive websites using HTML, CSS, JavaScript, and React.</p>
+  </section>
 
-    <!-- Top Slider - Scrolls Right -->
-    <div class="slider">
-      <div class="slide-track">
-        <div class="slide">Creative Thinking</div>
-        <div class="slide">Problem Solving</div>
-        <div class="slide">Web Development</div>
-        <div class="slide">User Experience</div>
-        <div class="slide">Teamwork</div>
-        <div class="slide">Smart Solutions</div>
-        <div class="slide">Frontend Magic</div>
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML5</div>
+      <div class="skill-card">CSS3</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">React.js</div>
+      <div class="skill-card">Node.js</div>
+      <div class="skill-card">MongoDB</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Personal website made with HTML, CSS and JS.</p>
+      </div>
+      <div class="project-card">
+        <h3>To-Do App</h3>
+        <p>A task manager built with React and local storage.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Weather forecast app using OpenWeatherMap API.</p>
       </div>
     </div>
+  </section>
 
-    <!-- Bottom Slider - Scrolls Left -->
-    <div class="slider">
-      <div class="slide-track reverse">
-        <div class="slide">Clean Code</div>
-        <div class="slide">Zain Web Solution</div>
-        <div class="slide">Fast Performance</div>
-        <div class="slide">Responsive Design</div>
-        <div class="slide">Modern Layouts</div>
-        <div class="slide">Mobile Friendly</div>
-        <div class="slide">Professional UI</div>
-      </div>
-    </div>
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <p>You can download my latest resume here:</p>
+    <a href="resume.pdf" class="btn-secondary" download>Download Resume</a>
+  </section>
 
-  </div>
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
 
-
-   <!-- Footer Start -->
   <footer>
-    <div class="footer-container">
-
-      <!-- Box 1: About -->
-      <div class="footer-box">
-        <h3>Zain Web Solution</h3>
-        <p>We design clean, responsive, and modern websites for individuals and businesses around the world.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-
-      <!-- Box 2: Quick Links -->
-      <div class="footer-box">
-        <h3>Quick Links</h3>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <!-- Box 3: Contact Info -->
-      <div class="footer-box">
-        <h3>Contact</h3>
-        <p><i class="fas fa-envelope"></i> zainwebsolutions1@gmail.com</p>
-        <p><i class="fas fa-map-marker-alt"></i> Attock Cantt, Pakistan</p>
-      </div>
-
-    </div>
-
-    <!-- Bottom copyright -->
-    <div class="footer-bottom">
-      &copy; 2025 Zain Web Solution. All Rights Reserved.
+    <p>&copy; 2025 Zain - All Rights Reserved</p>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
     </div>
   </footer>
-  <!-- Footer End -->
 
-
-
-
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 </body>
 </html>
